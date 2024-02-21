@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Javier Vergara" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
     <!-- Style -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <!--Title-->
@@ -27,7 +27,7 @@
     <nav data-bs-theme="dark" class="navbar navbar-expand-lg navbar-light px-5">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/favicon.png" alt="Logo" class="d-inline-block ps-5" />
+                <img src="assets/img/sh2.jpg" alt="Logo" class="d-inline-block ps-5" />
                 <p class="d-inline-block mb-0 fw-light">SuperHero</p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -36,23 +36,80 @@
             </button>
         </div>
     </nav>
-
-    <div class="row container m-auto col-8 pt-5">
-        <img src="assets/img/logo.png" alt="">
+    <div class="row container m-auto col-8 pt-4 pb-5">
+        <img src="assets/img/logo.jpg" alt="" class="logo">
         <h1 class="pt-3">Encuentra tu SuperHero</h1>
         <p>Ingresa el número del SuperHero a buscar</p>
-    <form class="pb-4" id="formulario">
-        <div class="mb-3">
-          <input type="text" class="form-control" id="codHero">
-        </div>
-        <button type="submit" class="btn btn-primary" id="buscar">Buscar</button>
-    </form>
+        <form class="" id="formulario">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="codHero">
+            </div>
+            <button type="submit" class="btn btn-primary" id="buscar" href="#tarjetaSection">Buscar</button>
+        </form>
     </div>
-    
-    
-    
+    <hr class="row container m-auto">
+    <section id="tarjetaSection">
+        <div class="row container m-auto pt-5 pb-5 justify-content-center" id="tarjeta">
+            <div class="col-4">
+                <h1>SuperHero Encontrado</h1>
+                <div class="card" style="width: 18rem;">
+                    <img src=" " class="card-img-top" alt="..." id="imagen">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-start">
+                            <h5 class="card-title">Nombre:</h5>
+                            <p id="nombreHero" class="ps-1"></p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <p class="card-text">Conexiones: </p>
+                            <p id="conexiones" class="ps-1"></p>
+                        </div>
+                        <div class="d-flex justify-content-start">
+                            <p class="card-text">Publicada por: </p>
+                            <p id="publicadoPor" class="ps-1"></p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-start">
+                                <p>Ocupación: </p>
+                                <p id="ocupacionHero" class="d-inline ps-1"></p>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-start">
+                                <p>Primera Aparición:</p>
+                                <p id="primeraAparicion" class="d-inline ps-1"></p>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-start">
+                                <p>Altura:</p>
+                                <p id="alturaHero" class="d-inline ps-1"></p>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-start">
+                                <p>Peso:</p>
+                                <p id="pesoHero" class="d-inline ps-1"></p>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-start">
+                                <p>Alianzas:</p>
+                                <p id="alianzas" class="d-inline ps-1"></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <h1>Estadisticas de Poder</h1>
+                <img src="assets/img/maqueta.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript Local -->
     <script src="assets/js/script.js"></script>
-
     <!-- CDN FontAwesome -->
     <script src="https://kit.fontawesome.com/d4b73d489f.js" crossorigin="anonymous"></script>
     <!-- Popper -->
@@ -63,8 +120,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    
-
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+html{
+    font-family: Roboto, sans-serif;
+}
 nav {
     background-color: #3d4545;
     color: #fff;
@@ -5,4 +8,7 @@ nav {
 nav a img {
     height: 2rem;
     width: 5.3rem;
+}
+.logo{
+    height: 30rem;
 }
