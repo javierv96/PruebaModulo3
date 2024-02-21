@@ -1,19 +1,19 @@
-const expresionRegular = /^[0-9]+$/;
+$(document).ready(function () {
 
-const login = (event) =>{
+    const expresionRegular = /^[0-9]+$/;
 
-    event.preventDefault();
+    const buscar = (event) => {
+        event.preventDefault();
 
-    let codigoHeroe = $('#codHeroe').val();
+        let codHero = $('#codHero');
 
-    if (expresionRegular.test(codigoHeroe)){
-        console.log(codigoHeroe)
-        alert("felicidades")
-    }else{
-        alert("error")
+        if (expresionRegular.test(codHero.val())) {
+            console.log(codHero)
+            alert("felicidades")
+        } else {
+            alert("El codigo ingresado no es valido.")
+        }
     }
-}
 
-let form = $("#formulario");
-
-form.on("submit", login);
+    $("#buscar").on("click", buscar);
+});
