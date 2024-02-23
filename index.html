@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--Meta-->
     <meta charset="UTF-8">
@@ -18,11 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet" />
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <nav data-bs-theme="dark" class="navbar navbar-expand-lg navbar-light px-5">
         <div class="container-fluid">
@@ -50,9 +45,9 @@
     <hr class="row container m-auto">
     <section id="tarjetaSection">
         <div class="row container m-auto pt-5 pb-5 justify-content-center" id="tarjeta">
-            <div class="col-4">
+            <div class="col-6">
                 <h1>SuperHero Encontrado</h1>
-                <div class="card" style="width: 18rem;">
+                <div class="card" style="width: 26rem;">
                     <img src=" " class="card-img-top" alt="..." id="imagen">
                     <div class="card-body">
                         <div class="d-flex justify-content-start">
@@ -104,12 +99,16 @@
             </div>
             <div class="col-4">
                 <h1>Estadisticas de Poder</h1>
-                <img src="assets/img/maqueta.jpg" alt="">
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
             </div>
         </div>
     </section>
-    <!-- JavaScript Local -->
-    <script src="assets/js/script.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Canvas -->
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <!-- CDN FontAwesome -->
     <script src="https://kit.fontawesome.com/d4b73d489f.js" crossorigin="anonymous"></script>
     <!-- Popper -->
@@ -120,6 +119,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <!-- JavaScript Local -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
