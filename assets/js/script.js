@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         let codHero = $('#codHero').val();
 
-        if (expresionRegular.test(codHero) && codHero <= 731) {
+        if (expresionRegular.test(codHero) && codHero>0 && codHero <= 731) {
 
             $('#tarjeta').show();
 
