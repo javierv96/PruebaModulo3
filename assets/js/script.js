@@ -9,7 +9,7 @@ $(document).ready(function () {
 
         let codHero = $('#codHero').val();
 
-        if (expresionRegular.test(codHero)) {
+        if (expresionRegular.test(codHero) && codHero <= 731) {
 
             $('#tarjeta').show();
 
@@ -70,7 +70,7 @@ $(document).ready(function () {
             }, 1000);
 
         } else {
-            alert("El codigo ingresado no es valido.")
+            alert("El codigo ingresado no es valido o no existe.")
         }
     }
 
