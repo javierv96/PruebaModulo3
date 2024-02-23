@@ -2,18 +2,7 @@ $(document).ready(function () {
 
     const expresionRegular = /^[0-9]+$/;
 
-    let tarjetaSection = $('#tarjeta');
-    let imagen = $('#imagen');
-    let nombreHero = $('#nombreHero');
-    let conexiones = $('#conexiones');
-    let publicadoPor = $('#publicadoPor');
-    let ocupacionHero = $('#ocupacionHero');
-    let primeraAparicion = $('#primeraAparicion');
-    let alturaHero = $('#alturaHero');
-    let pesoHero = $('#pesoHero');
-    let alianzas = $('#alianzas');
-
-    tarjetaSection.hide();
+    $('#tarjeta').hide();
 
     const buscar = (event) => {
         event.preventDefault();
@@ -22,17 +11,33 @@ $(document).ready(function () {
 
         if (expresionRegular.test(codHero)) {
 
-            tarjetaSection.show();
+            $('#tarjeta').show();
 
-            imagen.attr('src', `assets/img/${codHero}.jpg`);
-            nombreHero.text();
-            conexiones.text();
-            publicadoPor.text();
-            ocupacionHero.text();
-            primeraAparicion.text();
-            alturaHero.text();
-            pesoHero.text();
-            alianzas.text();
+            $.ajax({
+                url: `https://superheroapi.com/api/3387770791513256/${codHero}`,
+                type: 'GET',
+                success: function(response) {
+                    console.log("Objeto response: ", response)
+
+                    $('#nombreHero').text(response.name);
+
+                    // $('#imagen').attr('src', response.image.url);
+                    // $('#nombreHero').text(response.name);
+                    // $('#conexiones').text(response.connections['group-affiliation']);
+                    // $('#publicadoPor').text(response.biography.publisher);
+                    // $('#ocupacionHero').text(response.work.occupation);
+                    // $('#primeraAparicion').text(response.biography['first-appearance']);
+                    // $('#alturaHero').text(response.appearance.height);
+                    // $('#pesoHero').text(response.appearance.weight);
+                    // $('#alianzas').text(response.biography.aliases);
+
+                },    
+                dataType: 'json',
+                error: function(error) {
+                    console.log("Objeto error: ", error)
+                    console.error('Error al obtener los datos:', error.status);
+                }
+            });
 
             $('html, body').animate({
                 scrollTop: $('#tarjetaSection').offset().top
