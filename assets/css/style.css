@@ -12,3 +12,8 @@ nav a img {
 .logo{
     height: 30rem;
 }
+
+#chartContainer{
+    height: 300px; 
+    width: 100%;
+}
