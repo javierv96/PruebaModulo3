@@ -14,7 +14,8 @@ $(document).ready(function () {
             $('#tarjeta').show();
 
             $.ajax({
-                url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/3387770791513256/${codHero}`,
+                //url: `https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/3387770791513256/${codHero}`,
+                url: `https://www.superheroapi.com/api.php/3387770791513256/${codHero}`,
                 type: 'GET',
                 success: function (response) {
                     console.log("Objeto response: ", response)
